@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const image = document.createElement("img");
 
             image.src =
-                "../../images/" + encodeURIComponent(attraction.file);
+                "../images/" + encodeURIComponent(attraction.file);
 
             image.alt = attraction.name;
 
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const image = document.createElement("img");
 
                     image.src =
-                        "../../images/" +
+                        "../images/" +
                         encodeURIComponent(attraction.file);
 
                     image.alt = attraction.name;
