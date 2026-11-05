@@ -34,15 +34,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const description = document.getElementById("featuredDescription");
     const nextButton = document.getElementById("nextDestination");
 
-    nextButton.addEventListener("click", function () {
-        currentDestination++;
-        if (currentDestination >= destinations.length) {
-            currentDestination = 0;
-        }
+    if (!image || !title || !description || !nextButton) {
+        console.error("One or more destination elements are missing!");
+        return;
+    }
 
-        image.src = destinations[currentDestination].image;
-        title.textContent = destinations[currentDestination].name;
-        description.textContent = destinations[currentDestination].description;
-        image.alt = descriptions[currentDestination].name;
+    function displayDestination() {
+        const destination = destination[currentDestination];
+        image.src = destinations.image;
+        title.textContent = destinations.name;
+        description.textContent = destinations.description;
+        image.alt = descriptions.name;
+
+        console.log("Current destination: ", destination.name);
+    }
+    nextButton.addEventListener("click", function (){
+        currentDestination = (currentDestination + 1) % destinations.length;
+        displayDestination();
     });
 });
