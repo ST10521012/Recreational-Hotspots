@@ -43,6 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
         image.src = destinations[currentDestination].image;
         title.textContent = destinations[currentDestination].name;
         description.textContent = destinations[currentDestination].description;
-        image.alt = description[currentDestination].name;
+        image.alt = descriptions[currentDestination].name;
     });
 });
