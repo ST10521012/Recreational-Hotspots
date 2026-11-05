@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Contact Us | Discover South Africa</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Contact Discover South Africa</h1>
+            <p>We would love to hear from you</p>
+        </header>
+
+        <nav>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Attractions</a></li>
+            <li><a href="news and updates.html">News and Updates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </nav>
+
+        <main class="contact-container">
+
+            <h2>Send Us Your Feedback. We Would Really Appriciate It.</h2>
+
+            <form id="feedbackForm"
+                  action="https://formspree.io/f/xjyyjkbr"
+                  method="POST">
+
+                <div class="form-group">
+                 <label for="visitorName">Your Name:</label>
+                 <input
+                    type="text"
+                    id="visitorName"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                 >
+                </div>
+
+                <div class="form-group">
+                 <label for="visitorEmail">Email Address:</label>
+                 <input
+                     type="email"
+                     id="visitorEmail"
+                     name="email"
+                     placeholder="Enter your email"
+                     required
+                 >
+                </div>
+
+                <div class="form-group">
+                 <label for="visitorMessage">Your Feedback:</label>
+                 <textarea
+                     id="visitorMessage"
+                     name="message"
+                     placeholder="Tell us what you think..."
+                     minlength="10"
+                     required
+                 ></textarea>
+               </div>
+
+              <button type="submit" class="button">
+                  Submit Feedback
+              </button>
+
+                <p id="formMessage" aria-live="polite"></p>
+
+            </form>
+        </main>
+        <script src="../../js/feedback.js" defer></script>
+    </body>
+</html>

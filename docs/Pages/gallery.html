@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore tourist attractions and recreational hotspots across all nine provinces of South Africa.">
+
+    <title>Attractions | Discover South Africa</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+
+        <img
+            src="../../images/Discover South Africa logo.webp"
+            alt="Discover South Africa logo"
+            width="120"
+        >
+
+        <h1>Explore South Africa</h1>
+
+        <p>Discover the beauty of all nine provinces</p>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Attractions</a></li>
+            <li><a href="news and updates.html">News and Updates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main class="tourism-gallery">
+        <section>
+            <h2>Choose a Province</h2>
+
+            <div id="provinceButtons" class="province-buttons"> </div>
+        </section>
+        <section>
+            <h2 id="provinceHeading">Explore Our Attractions</h2>
+
+            <input
+                  type="search"
+                  id="attractionSearch"
+                  placeholder="Search for an attraction..."
+                  aria-label="Search attractions"
+            >
+            <p id="searchMessage" aria-live="polite"></p>
+            <div id="attractionContainer" class="attraction-grid"> </div>
+        </section>
+    </main>
+    <div id="imagePopup"
+         class="image-popup"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Enlarged attraction image"
+         aria-hidden="true">
+         <button id="closePopup"
+                 class="close-popup"
+                 type="button"
+                 aria-label="X">&times;
+        </button>
+        <div class="popup-content">
+            <img id="popupImage" src="" alt="">
+            <p id="popupCaption"></p>
+        </div>
+    </div>
+    <footer>
+        <p>
+            © 2026 Discover South Africa.
+            All Rights Resevered
+        </p>
+    </footer>
+
+    <script src="../../js/gallery.js" defer></script>
+    <script src="../../js/imageGallery.js" defer></script>
+</body>
+</html>
